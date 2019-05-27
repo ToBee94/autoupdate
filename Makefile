@@ -8,17 +8,13 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/freifunk-berlin-autoupdate/default
+define Package/freifunk-berlin-autoupdate
   SECTION:=freifunk-berlin
   CATEGORY:=freifunk-berlin
   URL:=http://github.com/freifunk-berlin/packages_berlin
   PKGARCH:=all
-endef
-
-define Package/freifunk-berlin-autoupdate
-  $(call Package/freifunk-berlin-autoupdate/default)
-  TITLE:=A script trying to get the upgrade process of a freifunk-berlin router smooth and easy
-  DEPENDS:=+uci
+  TITLE:=Freifunk Berlin Autoupdater for hedy
+  DEPENDS:= +uci
 endef
 
 define Package/freifunk-berlin-autoupdate/description
@@ -26,6 +22,7 @@ define Package/freifunk-berlin-autoupdate/description
 endef
 
 define Build/Prepare
+	mkdir -p $(PKG_BUILD_DIR)
 endef
 
 define Build/Configure
