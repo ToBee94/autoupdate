@@ -18,7 +18,7 @@ define Package/freifunk-berlin-autoupdate
 endef
 
 define Package/freifunk-berlin-autoupdate/description
-  autoupdate wants to get the upgrade process of a freifunk-berlin router via terminal smooth and easy.
+  TEST - autoupdate wants to get the upgrade process of a freifunk-berlin router via terminal smooth and easy.
 endef
 
 define Build/Prepare
